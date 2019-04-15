@@ -29,6 +29,7 @@ $(function(){
     $(".plus").click(plus());
     // var uarr = uniq1(arr);
     // var length = uarr.length;
+    //减按钮函数
     function plus(){
         return function(){
             var value = $(this).parent().children(".txt").val();
@@ -69,7 +70,7 @@ $(function(){
         }
     }
     $(".minus").click(minus())
-
+    //加按钮函数
     function minus(){
         return function(){
             var value = $(this).parent().children(".txt").val();

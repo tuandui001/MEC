@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>体检百科</title>
+	<link rel="shortcut icon" href="./img/logo_left.gif" >
+	<!--移动端必须要加的话-->
+	<meta name="viewport" width="device-width,initial-scale=1.0">
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css"/>
+	<link rel="stylesheet" type="text/css" href="css/MEC_guide.css"/>
+	<script src="js/jquery-1.8.3.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	 
+	<header class="container">
+		<!-- top登录 注册 -->
+				<nav class="navbar navbar-default navbar-static-top">
+					<div class="container" style="height:10px;">
+						<div class="col-xs-12  col-sm-2  pull-left " style="margin-top:14px;"> <span>中康医院-体检预约平台</span> </div>
+						<div class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xs-offset-4">
+							<ul class="nav navbar-nav navbar-right">
+								<li><a data-toggle="modal" data-target="#MEC-login-syh" href="../项目syh/首页4.11.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>请登录</a></li>
+								<li><a href="../项目hss/注册页面.html">【免费注册】</a></li>
+								<li><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=88888888&amp;site=qq&amp;menu=yes">客服服务</a></li>
+								<li><a href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>网站导航</a></li>
+							</ul>
+						</div>
+					</div>
+				</nav>
+		<!-- 体检logo图片 -->
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="col-xs-12 col-sm-4 col-md-4" >
+					<h1 class="MEC-shouye-left-logo-syh" >
+						<img src="img/logo_left.gif" alt="logo" />
+						<img src="img/logo_right.gif" alt="logo" />
+					</h1>
+			</div>
+				<!-- 搜索组件 -->
+		    <div class="col-xs-12  col-sm--4   col-md-4  col-lg-4">
+						<div >
+								
+								<div class="input-group MEC-shouye-logo-syh">
+									<input type="text" class="form-control" placeholder="套餐类别/套餐名/疾病名">
+									<span class="input-group-btn">
+										<button class="btn btn-info" type="button" >搜索</button>
+									</span>
+								</div>
+							</div>
+			</div>
+			<div class="col-xs-12  col-sm-3   col-md-3 col-lg-3">
+			<img src="img/new_kf.gif" alt="logo" />
+		 </div> 
+		</div>
+	
+	</header>
+	<nav class="container">
+		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 " style="padding:0">
+			<nav class="navbar navbar-info">
+				<div class="container-fluid">
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav MEC-pet-nav-hss" >
+							<li class="active"><a href="../项目syh/首页4.11.html">首页 <span class="sr-only">(current)</span></a></li>
+							<li class="active"><a href="../项目cb/体检页面.html">体检套餐</a></li>
+							<li class="active"><a href="../项目hss/Pet-ct-check.html">CT检查</a></li>
+							<li class="active"><a href="../项目hss/企业团检.html">企业团检</a></li>
+							<li class="active"><a href="../项目zxf/报告读取.html">报告读取</a></li>
+							
+							<li class="dropdown">
+									<a href="#" class="dropdown-toggle MEC-pet-head-hss" data-toggle="dropdown" role="button" aria-haspopup="true"
+										aria-expanded="false">体检百科<span class="caret"></span></a>
+									<ul class="dropdown-menu MEC-pet-nav-hss">
+										<li><a href="MEC_guide.html">体检指南</a></li>
+										<li><a href="./MEC_qaa.html">体检问答</a></li>
+										<li><a href="../项目hy/首页.html">体检项目</a></li>
+										<li><a href="#">体检咨询</a></li>
+									</ul>
+								</li>
+						</ul>
+						<ul class="nav navbar-nav navbar-right MEC-pet-nav-hss">
+								<li class="active">
+								 <a href="../项目cn/体检报告查询.html">体检报告查询</a> 
+								</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+
+	</nav>
+	<main class="container">
+		<section class="col-xs-12 col-sm-12"  style="padding:0">			
+			<div class="MEC-content-syh">
+			<!-- 内容在中间 -->
+			<div class="container wrap" >
+				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+				<header class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<div class="glyphicon glyphicon-home">					
+					</div>
+					<a href="index.html">首页</a>><a href="">体检指南</a>
+				</header>
+				<section class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+					<!-- 整个中间部分体检指南 -->
+					<div class="mian fixed mian_left col-xs-8 col-sm-8 col-md-8 col-lg-8">
+						<div class="mian_inner">
+							<div class="top fixed">
+								<div class="top_guide">
+									<img src="img/compass.png"><h3>体检指南</h3>
+								</div>
+								<div class="bottom_guid">
+									<ul>
+										<li><a href="#">体检动态</a></li>
+										<li><a href="#">体检常识</a></li>
+										<li><a href="#">体检问答</a></li>
+										<li><a href="#">体检百科</a></li>
+										<li><a href="#">健康资讯</a></li>
+										<li><a href="#">体检优惠活动</a></li>
+										<li><a href="#">女性体检</a></li>
+										<li><a href="#">男性体检</a></li>
+										<li><a href="#">儿童体检</a></li>
+										<li><a href="#">青少年体检</a></li>
+										<li><a href="#">老年人体检</a></li>
+										<li><a href="#">体检报告解读</a></li>
+										<li><a href="#">婚检</a></li>
+										<li><a href="#">孕检</a></li>
+										<li><a href="#">产检</a></li>
+										<li><a href="#">CT检查</a></li>
+										<li><a href="#">B超检查</a></li>
+										<li><a href="#">pet-ct知识</a></li>
+										<li><a href="#">肠镜检查</a></li>
+										<li><a href="#">肝功能检查</a></li>
+										<li><a href="#">尿常规检查</a></li>
+										<li><a href="#">肾功能检查</a></li>
+										<li><a href="#">胃镜检查</a></li>
+										<li><a href="#">糖化血红蛋白检查</a></li>
+										<li><a href="#">彩超检查</a></li>
+										<li><a href="#">心电图检查</a></li>
+										<li><a href="#">血常规检查</a></li>
+										<li><a href="#">血沉检查</a></li>
+										<li><a href="#">磁共振检查</a></li>
+										<li><a href="#">亚健康检查</a></li>
+										<li><a href="#">染色体/基因检查</a></li>
+										<li><a href="#">旅游体检指南</a></li>
+									</ul>
+								</div>
+							</div>
+							<!-- 体检解读报告内容 -->
+							<div class="center">
+								<div class="read">
+									<div class="div1">
+										<h4>体检报告解读</h4>
+										<div>
+											体检报告是在您对身体进行检查后，根据身体反应的数据而生成的具有一定格式的文档，报告内容较为专业，体检者往往不易理解。故该栏目结合体检报告内容，为用户做解读分析，让您大致知道体检报告该如何看，解决体检报告不易解读的难题。
+										</div>
+									</div>
+								</div>
+								<div aria-label="Page navigation" class="container btn_left">
+									<ul class="pagination ">
+										<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</a>
+										</li>
+										<li><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">4</a></li>
+										<li><a href="#">5</a></li>
+										<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</a>
+										</li>
+									</ul>
+								</div>			
+							</div>
+							<!--  -->
+						</div>
+					</div>
+					
+					<div class="mian_right col-xs-4 col-sm-4 col-md-4 col-lg-4">
+						<div>
+							<div><h4>热卖体检套餐</h4><hr></div>
+							<div class="dashed">
+								<img src="img/recommed_1.gif" class="img_remove">
+								<div class="font margin">
+									<a href="#">深圳坂田医院招工入职体检套餐</a>
+									<del>￥109.00</del>
+									<em>￥99.00</em>
+								</div>
+							</div>
+							<div class="dashed">
+								<img src="img/recommed_2.gif" class="img_remove" >
+								<div class="font margin">
+									<a href="#">深圳坂田医院身体普查套餐A(女)</a>
+									<del>￥805.00</del>
+									<em>￥789.00</em>
+								</div>
+							</div>
+							<div class="dashed">
+								<img src="img/recommed_3.gif" class="img_remove" >
+								<div class="font margin">
+									<a href="#">深圳坂田医院身体普查套餐A(男)</a>
+									<del>￥512.00</del>
+									<em>￥502.00</em>
+								</div>
+							</div>
+							<div class="dashed">
+								<img src="img/recommed_4.gif" class="img_remove" >
+								<div class="font margin">
+									<a href="#">深圳坂田医院身体普查套餐B(男)</a>
+									<del>￥1034.00</del>
+									<em>￥1014.00</em>
+								</div>
+							</div>
+							<div class="dashed">
+								<img src="img/recommed_5.gif" class="img_remove" >
+								<div class="font margin">
+									<a href="#">深圳坂田医院身体普查套餐B(女)</a>
+									<del>￥1054.00</del>
+									<em>￥1033.00</em>
+								</div>
+							</div>
+						</div>
+						<div class="recommend">
+							<div><h4>热门体检中心<hr/></h4></div>
+							<div>
+								<img src="img/recommed_6.gif" class="img_remove" >
+								<div class="font">
+									<a href="#">深圳坂田医院体检中心</a>
+									所在地：</br>
+									深圳市龙岗区
+								</div>	
+							</div>
+							<div>
+								<img src="img/recommed_7.gif" class="img_remove" >
+								<div class="font">
+									<a href="#">深圳市第五人民医院(罗湖医院)</a>
+									所在地：</br>
+									深圳市 罗湖区
+								</div>	
+							</div>
+							<div>
+								<img src="img/recommed_8.gif" class="img_remove" >
+								<div class="font">
+									<a href="#">瑞慈体检中心(深圳分院)</a>
+									所在地：</br>
+									深圳市 南山区
+								</div>	
+							</div>
+							<div>
+								<img src="img/recommed_9.gif" class="img_remove" >
+								<div class="font">
+									<a href="#">广州中医药大学深圳医院(深圳)</a>
+									所在地：</br>
+									深圳市 福田区
+								</div>	
+							</div>
+							<div>
+								<img src="img/recommed_10.gif" class="img_remove" >
+								<div class="font">
+									<a href="#">深圳协和健康体检中心</a>
+									所在地：</br>
+									深圳市 福田区
+								</div>	
+							</div>
+						</div>
+						<div class="recommend">
+							<div><h4>为什么选择中康体检网？</hr></h4></div>
+							<div>
+								<img src="img/recommed_11.gif" class="img_remove" >
+								<div class="font">
+									<h5>低价体验</h5>
+									<a href="#">体检套餐低价体验，在线支付再送抵用券！</a>
+								</div>	
+							</div>
+							<div>
+								<img src="img/recommed_12.gif" class="img_remove" >
+								<div class="font">
+									<h5>优质服务</h5>
+									<a href="#">专业客服顾问式指导，舒适贴心！</a>
+								</div>	
+							</div>		
+							<div>
+								<img src="img/recommed_13.gif" class="img_remove" >
+								<div class="font">
+									<h5>更多选择</h5>
+									<a href="#">体检预约服务覆盖全国100多个城市。</a>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</section>
+				<footer>
+					<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+						<div class="footer_top ">
+							<h5>友情链接:</h5>
+							<div class="friend_link ">
+								<ul >
+									<li><a href="#">医学论文</a></li>
+									<li><a href="#">牙齿整形</a></li>
+									<li><a href="#">医学教育网</a></li>
+									<li><a href="#">养生保健品</a></li>
+									<li><a href="#">北京癫痫病医院</a></li>
+									<li><a href="#">生活小常识</a></li>
+									<li><a href="#">母婴养生</a></li>
+									<li><a href="#">深圳体检</a></li>
+									<li><a href="#">广州体检</a></li>
+									<li><a href="#">成都体检</a></li>
+									<li><a href="#">北京体检</a></li>
+									<li><a href="#">上海体检</a></li>
+									<li><a href="#">长沙体检</a></li>
+									<li><a href="#">天津体检</a></li>
+									<li><a href="#">武汉体检</a></li>
+								</ul>
+							</div>
+							
+						</div>
+						<div><hr></div>
+						<div class="footer_bottom col-xs-12 col-sm-12 col-md-12 col-lg-12">							
+							<div class="left">
+								<h4>预约保障</h4>
+								<ul>
+									<li><a href="">用户协议</a></li>
+									<li><a href="">真实评价</a></li>
+									<li><a href="">隐私声明</a></li>
+								</ul>
+							</div>
+							<div class="left">
+								<h4>常见问题</h4>
+								<ul>
+									<li><a href="">新手指南</a></li>
+									<li><a href="">会员特权说明</a></li>
+									<li><a href="">优惠券使用规则</a></li>
+								</ul>
+							</div>
+							<div class="left">
+								<h4>帮助信息</h4>
+								<ul>
+									<li><a href="">网站地图</a></li>
+									<li><a href="">招贤纳士</a></li>
+									<li><a href="">品牌招商</a></li>
+								</ul>
+							</div>
+							<div class="left">
+								<h4>关于我们</h4>
+								<ul>
+									<li><a href="">平台简介</a></li>
+									<li><a href="">联系我们</a></li>
+									<li><a href="">版权声明</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</footer>
+				</div>
+			</div>
+			</div>
+		</section>
+	
+	</main>
+	<footer class="container">
+			<div class="MEC-weibu" >
+					<div class="MEC-weibu-buju-left">
+						<div class="MEC-weibu-buju-top">
+							<p>
+								Copyright 2012-2019 viptijian.com 版权所有：中康体检网(福州中康信息科技有限公司) ICP证：闽ICP备10017105号						
+								<br>								
+								声明:本站部分信息图片来源于互联网,如果侵犯了您的权益敬请告知.								
+								<a href="" style="color: grey;">sitemap</a>								
+								法律顾问：福建雅厚律师事务所							
+								<br>								
+								<a href="" style="color: #FFFFFF;">增值业务经营许可证：粤B2-15138</a>
+							</p>
+						</div>
+						<div class="MEC-weibu-buju-bot" >
+							<div class="logo-top">
+								<img src="img/logo-top-1.png" style="width: 80px;">	
+								<img src="img/logo-top-2.png" style="width: 80px;">	
+								<img src="img/logo-top-3.png" style="width: 80px;">	
+								<img src="img/logo-top-4.png" style="width: 80px;">	
+							</div>
+							<div class="logo-bot">
+								<img src="img/logo-bot-1.png" style="width: 80px;">
+								<img src="img/logo-bot-2.png" style="width: 80px;">
+								<img src="img/logo-bot-3.png" style="width: 80px;">
+								<img src="img/logo-bot-4.png" style="width: 80px;">
+								<img src="img/logo-bot-5.png" style="width: 80px;">
+							</div>
+						</div>
+					</div>
+					<div class="MEC-weibu-buju-left" >
+						<img src="img/ne_ewm.png">
+					</div>
+				</div>
+	</footer>
+	
+		<!-- 登录窗口 -->
+        <div id="MEC-login-syh" class="modal fade">
+				<div class="modal-dialog">
+						<div class="modal-content">
+								<div class="modal-body">
+										<button class="close" data-dismiss="modal">
+												<span>&times;</span>
+										</button>
+								</div>
+								<div>
+										<div class="modal-title">
+												<h1 class="text-center">登录</h1>
+										</div>
+										<div class="modal-body">
+												<div id="MEC-denglu-left-syh">
+														<img src="./img/登录图.jpg" alt="" />
+														<form class="form-group" action="" id="MEC-denglu-right-syh" id="myform" method="post">
+																<div class="form-group">
+																		<label for="">用户名</label>
+																		<input class="form-control" type="text" id="username" name="username">
+																</div>
+																<div class="form-group">
+																		<label for="">密码</label>
+																		<input class="form-control" type="password" id="password" name="passwd">
+																</div>
+																<div class="text-right">
+																		<button class="btn btn-primary" type="button" id="btn">登录</button>
+																		<button class="btn btn-danger" data-dismiss="modal">取消</button>
+																</div>
+																<a href="../项目hss/注册页面.html" data-toggle="modal" 
+																		>还没有账号？点我注册</a >
+														</form>
+												</div>
+										</div>
+								</div>
+						</div>
+				</div>
+		</div>
+			<!-- 右边框  客服  购物车 -->
+			<!-- <div class="container"></div> -->
+			<!-- 客服部分 -->
+			<div style="right:-230px;" class="contactusdiyou">
+				<div class="hoverbtn">
+					<span>客</span><span>服</span><span>购</span><span>物</span>
+					<img class="hoverimg" src="images/hoverbtnbg.gif" height="9" width="13">
+				</div>
+				<div class="conter">
+					<div class="blank0"></div>
+					<div class="qqcall">
+						<dl class="fn_cle">
+							<dt><img src="images/zxkfqq.png" height="31" width="31"></dt>
+							<dd class="f1 f_s14">在线客服：</dd>
+							<dd class="f2 kefuQQ">
+								<span>客服</span>
+								<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=88888888&amp;site=qq&amp;menu=yes"></a>
+							</dd>
+						</dl>
+						<div class="blank0"></div>
+					</div>
+					<div class="blank0"></div>
+					<div class="weixincall">
+						<dl class="fn_cle">
+							<dd class="f1">官方购物车：</dd>
+							<dd class="f3"> 
+								<a href="../项目cb/shopping.html"> <img src="images/gogogog.png" height="73" width="73"></a>
+							</dd>
+						</dl>
+					</div>
+					<div class="blank0"></div>
+					<div class="con1">
+						<dl class="fn_cle">
+							<dt><img src="images/tel.png" height="31" width="31"></dt>
+							<dd class="f1">咨询热线：</dd>
+							<dd class="f2"><span class="ph_num">188-8888-8888</span></dd>
+						</dl>
+					</div>
+				</div>
+			</div> 
+	
+</body>
+<script>
+	
+			$.ajax({
+				url:'http://192.168.7.221:3000/tijianlist',
+				type:'get',
+				dataType:'jsonp',
+				success:function(result){
+					var list = result.result;				
+					for(let i = 0; i < list.length; i++){
+						var oRead = $('.read');
+						var aDashed = $('<div class="dashed">');
+						var aH5 = $('<h5 class="h5">');
+						var aNswer = $('<div class="margin">'); 
+						var aSpan = $('<span>');
+						var aTimer = $('<div class="timer">');
+						var aMore = $('<a>');										
+						
+						aH5.text(list[i].question);
+						console.log(aH5);
+						aTimer.text(list[i].times);
+						aSpan.css('margin-left','2em');				
+						aMore.text(list[i].extend);
+																	
+						aDashed.append(aH5);
+						aNswer.append(aSpan);
+						aNswer.append(list[i].answer);
+						aNswer.append(aMore);
+						aDashed.append(aNswer);
+						aDashed.append(aTimer);
+						oRead.append(aDashed);			
+					}
+				},
+				error:function(){
+					
+				}
+			})
+			// 右边栏 购物车 在线客服
+			$(".contactusdiyou").hover(function () {
+							$(".hoverimg").attr("src", "images/hoverbtnbg1.gif");
+							$('.diyoumask').fadeIn();
+							$('.contactusdiyou').animate({ right: '0' }, 300);
+						}, function () {
+							$(".hoverimg").attr("src", "images/hoverbtnbg.gif");
+							$('.contactusdiyou').animate({ right: '-230px' }, 300, function () { });
+							$('.diyoumask').fadeOut();
+						});
+						// 登录界面交互
+						$("#btn").click(function () {
+                console.log(1)
+                let username = $("#username").val()
+                let passwd = $("#password").val()
+                $.post("http://192.168.7.221:3000/users/login", { "username": username, "passwd": passwd }, function (result) {
+                    console.log(result)
+                    if (result.status == "0") {
+                        // location.href="http://www.baidu.com"
+            // 返回原页面
+						alert('登录成功')
+            location = document.referrer
+                    } else {
+                        alert('登录失败 送卿一首情诗 尘世三千  吾爱有三 日月与卿 日为朝 月为暮 卿为朝朝暮暮')
+                    }
+                })
+            })
+
+
+	</script>
+
+</html>

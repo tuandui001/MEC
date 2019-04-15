@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pet-ct检查</title>
+    <link rel="shortcut icon" href="./image/logo_left.gif" >
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0 auto;
+        padding: 0 ;
+        box-sizing: border-box;
+    }
+    @media(max-width: 1300px) {
+        body {
+            width: 1300px;
+        }
+    }
+   
+    .MEC-pet-content-hss,.MEC-pet-content-hss .MEC-pet-tu1, .MEC-pet-content-hss .MEC-pet-tu2,.MEC-pet-content-hss .MEC-pet-tu3{
+        width: 100%;
+    }
+    .MEC-pet-content-hss .MEC-pet-tu1{
+        height: 249px;
+        background: url(./image/pet/pet_ct_02.jpg);
+        background-size: 100% 100%;
+    }
+    .MEC-pet-content-hss>h2,.MEC-pet-content-hss .MEC-pet-tu2 h4,.MEC-pet-content-hss .MEC-pet-tu3 h4,.MEC-pet-content-hss .MEC-pet-tu2 h2,.MEC-pet-content-hss .MEC-pet-tu2 p,.MEC-pet-content-hss .MEC-pet-zhuyi>h2, .MEC-pet-content-hss .MEC-pet-zhuyi>p,.MEC-pet-content-hss .MEC-pet-zhuyi div>h2,.MEC-pet-content-hss  .MEC-pet-zhuyi-p,.MEC-pet-content-hss .MEC-pet-tu3 p,.MEC-pet-content-hss .MEC-pet-tu3 h2{
+        text-align: center;
+    }
+    .MEC-pet-content-hss table{
+        margin-top: 10px;
+    }
+    .MEC-pet-content-hss .table th{
+        border-top: 0px;
+    }
+    .MEC-pet-content-hss table span{
+        font-size: 15px;
+    }
+    .MEC-pet-content-hss table dd{
+        color: orange;
+    }
+    .MEC-pet-content-hss table p{
+        width: 80px;
+        height: 30px;
+        border:red;
+        border-radius: 5px;
+    }
+    .MEC-pet-content-hss .MEC-pet-tu2{
+        height: 480px;
+        background: url(./image/pet/pet_ct_15.jpg);
+        background-size: 100% 100%;
+    }
+    .MEC-pet-content-hss .MEC-pet-tu2 .thumbnail,.MEC-pet-content-hss .MEC-pet-tu3 .thumbnail {
+        background: transparent;
+        border: 0;
+    }
+    .MEC-pet-content-hss .MEC-pet-tu2 h2, .MEC-pet-content-hss .MEC-pet-tu2 p{
+        color: white;
+    }
+   
+    .MEC-pet-content-hss .MEC-pet-tu2 h2,.MEC-pet-content-hss .MEC-pet-tu3 h2{
+        padding-top:20px;
+    }
+    .MEC-pet-content-hss .MEC-pet-zhuyi>p{
+        color: grey;
+    }
+    .MEC-pet-content-hss .MEC-pet-zhuyi div>p{
+        line-height: 35px;
+        font-size: 15px
+    }
+    .MEC-pet-content-hss .MEC-pet-zhuyi p>span{
+        color:#eecd28;
+        font-size: 19px;
+        
+    }
+    .MEC-pet-content-hss .MEC-pet-zhuyi div>p>a{
+        color: white; 
+    }
+    .MEC-pet-content-hss .MEC-pet-tu3{
+        height: 380px;
+        background: url(./image/pet/pet_ct_23.jpg);
+        background-position: -200px 20%;
+        background-size: 118% 100%;
+    }
+    .MEC-pet-content-hss .MEC-pet-tu3 h4{
+        color: red;
+    }
+
+/* ___________________头部和尾部样式___________________________ */
+    nav {
+        margin-bottom: 10px;
+    }
+    .input-group{
+        margin-top: 20px;
+    }
+    .nav>li>a{
+		color:white;
+    }
+    .navbar-collapse {
+	    background-color: lightskyblue;
+	}
+     /* 导航栏去padding */
+    .container-fluid {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    /* 轮播图大小 */
+    .carousel-inner>.item>img{
+        height: 300px;
+    }
+    .MEC-shouye-logo-syh{
+        padding-top: 20px;
+    }
+    .navbar-nav>li>.dropdown-menu{
+        background-color: lightskyblue;
+    }
+    .dropdown-menu {
+        min-width: 94px;
+    }
+    .dropdown-menu>li>a {
+        padding: 5px 10px 5px 16px
+    }
+    .navbar-nav>li>.dropdown-menu {
+        background-color: #a8d7f5;
+        width: 25px;
+        opacity: 0.9;
+    }
+    /* 尾部 */
+    .MEC-weibu{
+        background: #555;
+        color: #FFFFFF;
+        font-size: 12px;
+        padding: 25px;
+        width: 100%;
+        height: 220px;
+    }
+    .MEC-weibu-buju-left{
+        float: left;
+        margin-left:40px ;
+    }
+    .MEC-weibu-buju-top{
+        margin-top: 20px;
+        margin-bottom:20px;
+    }
+    /* 中部内容 具体大小可根据页面要求更改*/
+    .MEC-content-syh{
+        width: 300px;
+        height: 300px;
+    }
+    /* 何思思top */
+    .navbar-default {
+        height: 10px;
+        font-size: 12px;
+    }
+    .MEC-pet-head-hss{
+        background: #4b9fe6;  
+    }
+    nav .MEC-pet-nav-hss a:hover{
+        background: #4b9fe6;
+    }
+    /* ______导航样式—————————————— */
+	 #MEC-navbar-syh li{
+		 width: 100px;
+	 }
+	.container-fluid>.navbar-collapse{
+		padding-left:0;
+		text-align: center;
+	}
+    /* ——————————————————————登录界面样式——————开始—————————————— */
+		#MEC-denglu-left-syh img{
+			width: 35%;
+			height: 200px;
+        }
+        #MEC-denglu-right-syh{
+           width: 60%;
+           float:right;
+		}
+		.thumbnail img{
+			height:226px;
+		}
+		/* —————————————————————登录界面样式——————结束————————————————————— */
+
+/* ___________________头部和尾部样式______结束_____________________ */
+</style>
+<body>
+    <header class="container">
+    <!-- top登录 注册 -->
+        <nav class="navbar navbar-default navbar-static-top">
+            <div class="container" style="height:10px;">
+                <div class="col-xs-12  col-sm-2  pull-left " style="margin-top:14px;"> <span>中康医院-体检预约平台</span> </div>
+                <div class=" col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xs-offset-4" >
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a data-toggle="modal" data-target="#MEC-login-syh" href="../项目syh/首页4.11.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>请登录</a></li>
+                        <li><a href="注册页面.html">【免费注册】</a></li>
+                        <li><a href="http://wpa.qq.com/msgrd?v=3&amp;uin=88888888&amp;site=qq&amp;menu=yes">客服服务</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span>网站导航</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    <!-- 体检logo图片 -->
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <div class="col-xs-12 col-sm-4 col-md-4" >
+            <h1 class="MEC-shouye-left-logo-syh" >
+                <img src="./image/logo_left.gif" alt="logo" />
+                <img src="./image/logo_right.gif" alt="logo" />
+            </h1>
+        </div>
+            <!-- 搜索组件 -->
+        <div class="col-xs-12  col-sm--4   col-md-4  col-lg-4">
+            <div >  
+                <div class="input-group MEC-shouye-logo-syh">
+                    <input type="text" class="form-control" placeholder="套餐类别/套餐名/疾病名">
+                    <span class="input-group-btn">
+                        <button class="btn btn-info" type="button" >搜索</button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12  col-sm-3   col-md-3 col-lg-3">
+        <img src="./image/new_kf.gif" alt="logo" />
+        </div> 
+    </div>
+    </header>
+    <nav class="container">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"  style="padding:0">
+            <nav class="navbar navbar-info">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav MEC-pet-nav-hss" id='MEC-navbar-syh'>
+                            <li class="active"><a href="../项目syh/首页4.11.html">首页 <span class="sr-only">(current)</span></a></li>
+                            <li class="active"><a href="../项目cb/体检页面.html">体检套餐</a></li>
+                            <li class="active MEC-pet-head-hss"><a href="#">CT检查</a></li>
+                            <li class="active"><a href="./企业团检.html">企业团检</a></li>
+                            <li class="active"><a href="../项目zxf/报告读取.html">报告读取</a></li>
+                            
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                    aria-expanded="false">体检百科<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="../项目wch/MEC_guide.html">体检指南</a></li>
+                                    <li><a href="../项目wch/MEC_qaa.html">体检问答</a></li>
+                                    <li><a href="#">体检项目</a></li>
+                                    <li><a href="#">体检咨询</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right MEC-pet-nav-hss ">
+                            <li class="active">
+                                <a href="../项目cn/体检报告查询.html">体检报告查询</a> 
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="container">
+        <section class="col-xs-12 col-sm-12"  style="padding:0">
+        <!-- ___________________________________以上是头_____________________________-->
+
+            <div class="MEC-pet-content-hss">
+                <div class="MEC-pet-tu1"></div>
+                <h2>PET-CT体检套餐</h2>
+                <div>   
+                    <ul class="nav nav-tabs  MEC-pet-content-taocan-nav">
+                        <li role="presentation"  class="active"><a>
+                                <button type="button" class="btn btn-info">销量排行</button>
+                        </a></li>
+                        <li role="presentation" ><a>
+                                <button type="button" class="btn btn-primary">价格最低</button>
+                        </a></li>
+                        <li role="presentation"><a>
+                                <button type="button" class="btn btn-success">好评排行</button>
+                        </a></li>
+                        <li role="presentation"><a>
+                                <button type="button" class="btn btn-danger">最新上线</button>
+                        </a></li>
+                    </ul>
+                </div>
+                <div>
+                    <table class="table table-hover">
+                        <tr>
+                            <th class="text-center">体检套餐</td>
+                            <th >套餐原价</td>
+                            <th ><dd>中康优惠价</dd></td>
+                            <th >操作</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                
+                <div class="MEC-pet-tu2">
+                    <h2>PET-CT的四大用途</h2>
+                    <p>高准确率 预防肿瘤</p>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_26.png" alt="...">
+                                <div class="caption">
+                                    <h4 style="color:#f76661">高端体检</h4>
+                                    <p>PET-CT用于体检可以查出>2
+                                            mm的细微肿瘤病变，提醒人
+                                            们应及时发现。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_27.png" alt="...">
+                                <div class="caption">
+                                    <h4 style="color:#eecd28">肿瘤筛查</h4>
+                                    <p>
+                                        PET-CT能对肿瘤进行早期诊断
+                                        和鉴别诊断，寻找肿瘤原发和转
+                                        移灶指导和确定肿瘤的治疗方案
+                                        评价疗效。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_28.png" alt="...">
+                                <div class="caption">
+                                    <h4 style="color:#2ced5c">健康查体</h4>
+                                    <p>
+                                        PET-CT是健康查体的手段，能一
+                                        次显像完成全身检测，可早期发
+                                        现肿瘤及心、脑疾病，达到有病
+                                        早治无病预防的目的。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-3">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_29.png" alt="...">
+                                <div class="caption">
+                                    <h4 style="color:#41e5fe">疗效评估</h4>
+                                    <p>
+                                        PET-CT检查可以确定肿瘤、癌
+                                        细胞的活跃性是否有变化、全身
+                                        其他部位还有没有扩展，可以判
+                                        断出之前的治疗效果。
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>         
+                </div>
+                <div  class="MEC-pet-zhuyi">
+                    <h2>PET-CT检查注意事项</h2>
+                    <p>我们提供一体化的服务内容</p>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail" style="border-top:5px solid #f76661">
+                                <h2 style="color:#f76661" >PET-CT是什么？</h1>
+                                <div class="caption" style="border-top:1px dashed grey">
+                                    <p>
+                                        PET-CT是目前可在活体上显示生物分子代谢、
+                                        受体及神经介质活动的新型影像技术，
+                                        现已广泛用于多种疾病的诊断与鉴别诊断、
+                                        病情判断、疗效评价、脏器功能研究等方面。
+                                        有着灵敏度高、特异性高、全身现象、安全性好等特点。
+                                    </p>
+                                    <p class="MEC-pet-zhuyi-p"><a href="#" class="btn" style="background:#f76661">咨询详情</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail" style="border-top:5px solid #eecd28">
+                                <h2 style="color:#eecd28" >PET-CT检查前注意事项</h1>
+                                <div class="caption" style="border-top:1px dashed grey">
+                                    <p>
+                                        <span>1、</span>检查前一天保持清淡饮食 ; <br>
+                                        <span>2、</span>检查前，需带齐资料(病史治疗记录、影像学检查资料如CT、MRI、ECT等)备查 ; <br>
+                                        <span>3、</span>检查前需要禁食6小时，避免服用高糖类物质 ;<br>
+                                        <span>4、</span>接受心脏检查时可能需要口服葡萄糖。
+                                    </p>
+                                    <p class="MEC-pet-zhuyi-p"><a href="#" class="btn" style="background:#eecd28">咨询详情</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <div class="thumbnail" style="border-top:5px solid #41e5fe">
+                                <h2 style="color:#41e5fe" >PET-CT是什么？</h1>
+                                <div class="caption" style="border-top:1px dashed grey">
+                                    <p>
+                                        PET-CT是目前可在活体上显示生物分子代谢、
+                                        受体及神经介质活动的新型影像技术，
+                                        现已广泛用于多种疾病的诊断与鉴别诊断、
+                                        病情判断、疗效评价、脏器功能研究等方面。
+                                        有着灵敏度高、特异性高、全身现象、安全性好等特点。
+                                    </p>
+                                    <p class="MEC-pet-zhuyi-p"><a href="#" class="btn" style="background:#41e5fe">咨询详情</a> </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="MEC-pet-tu3">
+                    <h2>PET-CT预约流程</h2>
+                    <p>我们提供一体化的服务内容</p>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-2">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_30.png" alt="...">
+                                <div class="caption">
+                                    <h4>01 ></h4>
+                                    <p>
+                                        注册成为中康体检网会员
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_31.png" alt="...">
+                                <div class="caption">
+                                    <h4>02 ></h4>
+                                    <p>
+                                        选择您需要的体检套餐
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_32.png" alt="...">
+                                <div class="caption">
+                                    <h4>03 ></h4>
+                                    <p>
+                                        填写您的预约信息
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_33.png" alt="...">
+                                <div class="caption">
+                                    <h4>04 ></h4>
+                                    <p>
+                                        成功提交订单，完成在线支付
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                            <div class="thumbnail">
+                                <img src="./image/pet/pet_ct_34.png" alt="...">
+                                <div class="caption">
+                                    <h4>05 ></h4>
+                                    <p>
+                                        中康客服电话告知体检注意事项
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 col-md-2">
+                                <div class="thumbnail">
+                                    <img src="./image/pet/pet_ct_35.png" alt="...">
+                                    <div class="caption">
+                                        <h4>06 ></h4>
+                                        <p>
+                                            按照您预约的时间过去体检即可
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>         
+                    </div>
+                </div>
+            </div>
+         <!-- ___________________________________以下是尾_____________________________-->       
+        </section> 
+    </main>
+    <footer class="container">
+        <div class="MEC-weibu" >
+            <div class="MEC-weibu-buju-left">
+                <div class="MEC-weibu-buju-top">
+                    <p>
+                        Copyright 2012-2019 viptijian.com 版权所有：中康体检网(福州中康信息科技有限公司) ICP证：闽ICP备10017105号
+                        <br>
+                        声明:本站部分信息图片来源于互联网,如果侵犯了您的权益敬请告知.
+                        <a href="" style="color: grey;">sitemap</a>
+                        法律顾问：福建雅厚律师事务所<br>
+                        <a href="" style="color: #FFFFFF;">增值业务经营许可证：粤B2-15138</a>
+                    </p>
+                </div>
+                <div class="MEC-weibu-buju-bot" >
+                    <div class="logo-top">
+                        <img src="./image/logo-top-1.png" style="width: 80px;">	
+                        <img src="./image/logo-top-2.png" style="width: 80px;">	
+                        <img src="./image/logo-top-3.png" style="width: 80px;">	
+                        <img src="./image/logo-top-4.png" style="width: 80px;">	
+                    </div>
+                    <div class="logo-bot">
+                        <img src="./image/logo-bot-1.png" style="width: 80px;">
+                        <img src="./image/logo-bot-2.png" style="width: 80px;">
+                        <img src="./image/logo-bot-3.png" style="width: 80px;">
+                        <img src="./image/logo-bot-4.png" style="width: 80px;">
+                        <img src="./image/logo-bot-5.png" style="width: 80px;">
+                    </div>
+                </div>
+            </div>
+            <div class="MEC-weibu-buju-left" >
+                <img src="./image/ne_ewm.png">
+            </div>
+        </div>
+    </footer>
+    <!-- 登录窗口 -->
+    <div id="MEC-login-syh" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+                <div>
+                    <div class="modal-title">
+                        <h1 class="text-center">登录</h1>
+                    </div>
+                    <div class="modal-body">
+                        <div id="MEC-denglu-left-syh">
+                            <img src="./image/登录图.jpg" alt="" />
+                            <form class="form-group" action="" id="MEC-denglu-right-syh" id="myform" method="post">
+                                <div class="form-group">
+                                    <label for="">用户名</label>
+                                    <input class="form-control" type="text" id="username" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="">密码</label>
+                                    <input class="form-control" type="password" id="password" name="passwd">
+                                </div>
+                                <div class="text-right">
+                                    <button class="btn btn-primary" type="button" id="btn">登录</button>
+                                    <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                                </div>
+                                <a href="./注册页面.html" data-toggle="modal" >还没有账号？点我注册</a >
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<!-- 右边框  客服  购物车 -->
+    <!-- <div class="container"></div> -->
+    <!-- 客服部分 -->
+    <div style="right:-230px;" class="contactusdiyou">
+        <div class="hoverbtn">
+            <span>客</span><span>服</span><span>购</span><span>物</span>
+            <img class="hoverimg" src="./images/hoverbtnbg.gif" height="9" width="13">
+        </div>
+        <div class="conter">
+            <div class="blank0"></div>
+            <div class="qqcall">
+                <dl class="fn_cle">
+                    <dt><img src="./images/zxkfqq.png" height="31" width="31"></dt>
+                    <dd class="f1 f_s14">在线客服：</dd>
+                    <dd class="f2 kefuQQ">
+                        <span>客服</span>
+                        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&amp;uin=88888888&amp;site=qq&amp;menu=yes"></a>
+                    </dd>
+                </dl>
+                <div class="blank0"></div>
+            </div>
+            <div class="blank0"></div>
+            <div class="weixincall">
+                <dl class="fn_cle">
+                    <dd class="f1">官方购物车：</dd>
+                    <dd class="f3"> 
+                        <a href="../项目cb/shopping.html"> <img src="./images/gogogog.png" height="73" width="73"></a>
+                    </dd>
+                </dl>
+            </div>
+            <div class="blank0"></div>
+            <div class="con1">
+                <dl class="fn_cle">
+                    <dt><img src="images/tel.png" height="31" width="31"></dt>
+                    <dd class="f1">咨询热线：</dd>
+                    <dd class="f2"><span class="ph_num">188-8888-8888</span></dd>
+                </dl>
+            </div>
+        </div>
+    </div> 
+</body>
+<script>
+  
+    // 右边栏 购物车 在线客服
+    $(".contactusdiyou").hover(function () {
+        $(".hoverimg").attr("src", "images/hoverbtnbg1.gif");
+        $('.diyoumask').fadeIn();
+        $('.contactusdiyou').animate({ right: '0' }, 300);
+    }, function () {
+        $(".hoverimg").attr("src", "images/hoverbtnbg.gif");
+        $('.contactusdiyou').animate({ right: '-230px' }, 300, function () { });
+        $('.diyoumask').fadeOut();
+    });
+
+    // 登录界面交互
+    $("#btn").click(function () {
+        console.log(1)
+        let username = $("#username").val()
+        let passwd = $("#password").val()
+        $.post("http://192.168.7.221:3000/users/login", { "username": username, "passwd": passwd }, function (result) {
+            console.log(result)
+            if (result.status == "0") {
+                // 返回原页面
+                alert('登录成功')
+                location = document.referrer
+            } else {
+                alert('登录失败 送卿一首情诗 尘世三千  吾爱有三 日月与卿 日为朝 月为暮 卿为朝朝暮暮')
+            }
+        })
+    })
+
+
+
+
+    $.ajax({
+        url:'http://192.168.7.221:3000/MEC_tijian/taocan',
+        type:'get',
+        dataType:'jsonp',
+        success:function(res){
+            var result = res.result
+            console.log(result)
+            
+           
+
+            
+
+            // var $table = $('.MEC-pet-content-hss').children(4).children(3).html()
+            $('.MEC-pet-content-taocan-nav').children('li').click(function(){
+                $(this).siblings().removeClass('active')
+                $(this).addClass('active')
+                // var $class = $(this).attr('class')
+                // console.log($('.MEC-pet-content-hss').children(4).children(3).children('table'))   
+            })
+
+            // var otable =$('table')
+            //     var otr0 = $('<tr>')
+            //     var oth1 = $('<th class="text-center">体检套餐</th>')
+            //     var oth2 = $('<th >套餐原价</th>')
+            //     var oth3 = $('<th ><dd>中康优惠价</dd></th>')
+            //     var oth4 = $('<th >操作</th>')
+
+            //     otr0.append(oth1)
+            //     otr0.append(oth2)
+            //     otr0.append(oth3)
+            //     otr0.append(oth4)
+            //     otable.append(otr0)
+
+
+            if($('.active').eq(6).text().trim() == '销量排行'){
+                for(let i = 0;i < result.length;i++){
+                    var otable =$('table')
+                    var otr = $('<tr>')
+                    var otd1 = $('<td>')
+                    var otd2 = $('<td>')
+                    var otd3 = $('<td>')
+                    var otd4 = $('<td>')
+                    var ospan = $('<span>')
+                    var odd = $('<dd>')
+                    var oa = $('<a>')
+
+                    ospan.text(result[i].name)
+                    otd2.text('￥' + result[i].number1 + '.00' )
+                    odd.text('￥' + result[i].number2 + '.00')
+                    oa.text('查看详情')
+
+                    otd1.append(ospan)
+                    otd3.append(odd)
+                    otd4.append(oa)
+                    otr.append(otd1)
+                    otr.append(otd2)
+                    otr.append(otd3)
+                    otr.append(otd4)
+                    otable.append(otr)
+                }
+            }else{
+                for(let i = result.length;i >= 0;i--){
+                    var otable =$('table')
+                    var otr = $('<tr>')
+                    var otd1 = $('<td>')
+                    var otd2 = $('<td>')
+                    var otd3 = $('<td>')
+                    var otd4 = $('<td>')
+                    var ospan = $('<span>')
+                    var odd = $('<dd>')
+                    var oa = $('<a>')
+
+                    ospan.text(result[i].name)
+                    otd2.text('￥' + result[i].number1 + '.00' )
+                    odd.text('￥' + result[i].number2 + '.00')
+                    oa.text('查看详情')
+
+                    otd1.append(ospan)
+                    otd3.append(odd)
+                    otd4.append(oa)
+                    otr.append(otd1)
+                    otr.append(otd2)
+                    otr.append(otd3)
+                    otr.append(otd4)
+                    otable.append(otr)
+                }
+            }
+
+        }
+    })
+</script>
+</html>

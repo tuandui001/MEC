@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-1.8.3.min.js"></script>
+		<style type="text/css">
+		
+			.wrapper{
+				background: transparent;
+				width: 320px;
+				height: 400px;
+				padding: 10px;
+			}
+			.wrap{
+				background: #FFF;	
+			}
+			.center{
+				text-align: center;
+			}
+			.box li{				
+				float: left;
+				list-style: none;
+				margin-right: 10px;
+			}
+			.box{
+				width: 314px;
+				height: 40px;
+				font-size: 13px;
+				color: #555;
+				display: inline-block;
+				border: 1px solid #D9DBDA;
+				margin-bottom: 10px;
+			}
+			.box li:nth-child(1){
+				position: relative;
+				left: -20px;
+				margin-right: 0;
+			}
+			.box li:nth-child(2){
+				border-left: 1px solid gainsboro;
+				padding-left: 10px;
+			}
+			.float{
+				float: left;
+				line-height: 32px;
+			}
+			select{
+				width: 200px;
+			}
+			.btn{
+				background: #2EABE8;
+				color: #FFF;
+				width: 314px;
+				height: 40px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrapper ">
+			<div class="wrap center">
+				<div  class="border">
+					<h2 class="center">深圳快速预约体检</h2>
+					<div class="box">
+						<div>
+							<ul>
+								<li>价位</li>
+								<li><span>300~500元</span></li>
+								<li><span>500~1500元</span></li>
+								<li><span>1500元以上</span></li>
+							</ul>
+						</div>
+					</div>
+					<div class="box">
+						<ul>
+							<li>性别</li>
+							<li><span>男女通用<input type="radio" name="1"/></span></li>
+							<li><span>男性<input type="radio" name="1"/></span></li>
+							<li><span>女性<input type="radio" name="1"/></span></li>
+						</ul>
+					</div>
+					<div class="box">
+						<ul>
+							<li>类型</li>
+							<li>
+								<select>
+									<option value ="">请选择体检类型</option>
+									<option value ="">全身体检</option>
+									<option value ="">入职体检</option>
+									<option value ="">健康防癌体检</option>
+									<option value ="">常规体检</option>
+									<option value ="">妇科体检</option>
+								</select>
+							</li>
+						</ul>						
+					</div>
+					<div class="box">
+						<ul>
+							<li>性质</li>
+							<li><span>三甲医院</span></li>
+							<li><span>专业体检中心</span></li>
+							<li><span>公立医院</span></li>
+						</ul>
+					</div>
+					<input type="button" value="搜索" class="btn" />
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var aSpan = $('span');
+		$(function(){
+			$('span').bind('click',function(){
+				for(var i = 0; i < aSpan.length; i++){
+					aSpan[i].style.color = '#555';
+					this.style.color = '#2EABE8';
+				}
+			})
+			
+		})
+	</script>
+</html>

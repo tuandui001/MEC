@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="./css/bootstrap.min.css">
+        <script src="js/jquery-1.8.3.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <style>
+            #MEC-denglu-left-syh img {
+                width: 35%;
+                height: 200px;
+            }
+
+            #MEC-denglu-right-syh {
+                width: 60%;
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <li><a data-toggle="modal" data-target="#MEC-login-syh" href=""> 登录</a></li>
+        <!-- 登录窗口 -->
+        <div id="MEC-login-syh" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button class="close" data-dismiss="modal">
+                            <span>&times;</span>
+                        </button>
+                    </div>
+                    <div>
+                        <div class="modal-title">
+                            <h1 class="text-center">登录</h1>
+                        </div>
+                        <div class="modal-body">
+                            <div id="MEC-denglu-left-syh">
+                                <img src="./img/登录图.jpg" alt="" />
+                                <form class="form-group" action="" id="MEC-denglu-right-syh" id="myform" method="post">
+                                    <div class="form-group">
+                                        <label for="">用户名</label>
+                                        <input class="form-control" type="text" id="username" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="">密码</label>
+                                        <input class="form-control" type="password" id="password" name="passwd">
+                                    </div>
+                                    <div class="text-right">
+                                        <button class="btn btn-primary" type="button" id="btn">登录</button>
+                                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                                    </div>
+                                    <a href="" data-toggle="modal" data-dismiss="modal"
+                                        data-target="#register">还没有账号？点我注册</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- PHP数据处理
+<?php
+//data/user/login.php
+header("Content-Type:application/json"); 
+require_once("../init.php");
+
+//获取用户名和密码
+@$uname=$_REQUEST["uname"];
+@$upwd=$_REQUEST["upwd"];
+
+//查询数据库中用户表的数据，并返回提示信息
+if($uname && $upwd){ 
+    $sql="SELECT * FROM xxx_user WHERE uname='$uname' and binary upwd='$upwd'"; 
+    //密码区分大小写，加binary
+    $result=mysqli_query($conn,$sql);
+    $row=mysqli_fetch_row($result); 
+    if($row!=null){
+    //如果存在相应的用户名和密码
+        session_start(); 
+        //PHP session 变量用于存储有关用户会话的信息，或更改用户会话的设置
+        //把用户信息存储到 PHP session 中之前，首先必须启动会话       
+        $_SESSION["uid"]=$row[0]; 
+        //获取uid
+        //存储和取回session变量的正确方法是使用$_SESSION变量
+        echo json_encode(["ok"=>1]); 
+        //登录成功返回的提示信息
+    }else
+        echo json_encode(["ok"=>0,"msg"=>"用户名密码不正确！"]);
+        //登录失败返回的提示信息
+} -->
+    </body>
+      <script>
+        //   登录成功后跳转回当前页面
+        /*   $(() => {
+                $("#btn>:button").click(() => {
+                    //发ajax请求，提交用户名和密码
+                    $.post(
+                        "http://192.168.7.221:3000/users/login",
+                        //规定连同请求发送到服务器的数据
+                        {
+                            username: $("#username").val(),
+                            passwd: $("#password").val()
+                        }
+                    ).then(result => {
+                        if (result.status=="0") {
+                            alert("登录成功");
+                            location = document.referrer
+                            //跳回原页面，referrer 属性可返回载入当前文档的文档的 URL
+                        } else
+                            alert("登录失败！" + data.msg);
+                    });
+                });
+            });
+            */
+            // 登录界面交互
+        $("#btn").click(function () {
+                console.log(1)
+                let username = $("#username").val()
+                let passwd = $("#password").val()
+                $.post("http://192.168.7.221:3000/users/login", { "username": username, "passwd": passwd }, function (result) {
+                    console.log(result)
+                    if (result.status == "0") {
+                        // location.href="http://www.baidu.com"
+                        location = document.referrer
+                        //跳回原页面，referrer 属性可返回载入当前文档的文档的 URL
+                    } else {
+                        alert('sisi error')
+                    }
+                })
+            })
+      </script>
+    </html>
+    </div>
+</body>
+
+</html>

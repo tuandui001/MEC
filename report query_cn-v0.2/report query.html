@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!--移动端必须要加的话-->
+    <meta name="viewport" width="device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/inquire_top.css">
+    <!-- <script src="js/pull-down list-cn.js"></script> -->
+    
+
+    <style>
+        /* header,nav,main,footer{
+				background-color: rgb(237, 241, 231);
+			} */
+        /* 头部 */
+        nav {
+            margin-bottom: 10px;
+        }
+
+        .input-group {
+            margin-top: 20px;
+        }
+
+        .nav>li>a {
+
+            color: white;
+        }
+
+        .navbar-collapse {
+            background-color: lightskyblue;
+        }
+
+        /* ____________________每页都有__下拉菜单变窄____________________ */
+        .dropdown-menu {
+            min-width: 94px;
+        }
+
+        .dropdown-menu>li>a {
+            padding: 5px 10px 5px 16px
+        }
+
+        .navbar-nav>li>.dropdown-menu {
+            background-color: #a8d7f5;
+            width: 25px;
+            opacity: 0.9;
+        }
+
+        /* __________________________________________________________________ */
+        /* 尾部 */
+        .MEC-weibu {
+            background: #555;
+            color: #FFFFFF;
+            font-size: 12px;
+            padding: 25px;
+            width: 100%;
+            height: 220px;
+        }
+
+        .MEC-weibu-buju-left {
+            float: left;
+            margin-left: 40px;
+        }
+
+        .MEC-weibu-buju-top {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        /* 何思思top */
+        .navbar-default {
+            height: 10px;
+            font-size: 12px;
+        }
+
+        /* 首页背景变蓝 */
+        #MEC-navbar-syh li a:hover {
+            background-color: lightskyblue;
+        }
+
+        #MEC-navbar-syh li a:visited {
+            background-color: lightskyblue;
+        }
+
+        .container-fluid>.navbar-collapse,
+        .container-fluid>.navbar-header,
+        .container>.navbar-collapse,
+        .container>.navbar-header {
+            margin-top: -18px;
+        }
+
+        /* 登录窗口样式 */
+        #MEC-denglu-left-syh img {
+            width: 35%;
+            height: 200px;
+        }
+
+        #MEC-denglu-right-syh {
+            width: 60%;
+            float: right;
+        }
+
+        .thumbnail img {
+            height: 226px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="container">
+        <!-- top登录 注册 -->
+        <nav
+            class="navbar navbar-default navbar-static-top">
+
+            <div
+                class="container hidden-xs hidden-sm">
+                <div class="col-xs-12  col-sm-2  pull-left "
+                    style="margin-top:14px;">
+                    <span>中康医院-体检预约平台</span>
+                </div>
+                <div
+                    class="col-xs-12 col-sm-5 col-md-5 col-lg-5 col-xs-offset-4">
+                    <ul
+                        class="nav navbar-nav navbar-right">
+                        <li><a data-toggle="modal"
+                                data-target="#MEC-login-syh"
+                                href=""><span
+                                    class="glyphicon glyphicon-user"
+                                    aria-hidden="true"></span>请登录</a>
+                        </li>
+                        <li><a href="#">【免费注册】</a>
+                        </li>
+                        <li><a href="#">客服服务</a>
+                        </li>
+                        <li><a href="#"><span
+                                    class="glyphicon glyphicon-th-list"
+                                    aria-hidden="true"></span>网站导航</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- 体检logo图片 -->
+        <div class=" col-md-12 col-lg-12">
+            <div class=" col-sm-4 col-md-4">
+                <h1
+                    class="MEC-shouye-left-logo-syh">
+                    <img src="img/logo_left.gif"
+                        alt="logo" />
+                    <img src="img/logo_right.gif"
+                        alt="logo" />
+                </h1>
+            </div>
+            <!-- 搜索组件 -->
+            <div class=" col-md-4  col-lg-4">
+                <div>
+
+                    <div
+                        class="input-group MEC-shouye-logo-syh">
+                        <input type="text"
+                            class="form-control"
+                            placeholder="套餐类别/套餐名/疾病名">
+                        <span
+                            class="input-group-btn">
+                            <button
+                                class="btn btn-info"
+                                type="button">搜索</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class=" col-md-3 col-lg-3">
+                <img src="img/new_kf.gif"
+                    alt="logo" />
+            </div>
+        </div>
+
+    </header>
+    <nav class="container"
+        style="margin-bottom:0px;">
+        <div class="navbar-header">
+            <button type="button"
+                class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle
+                    navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"></a>
+        </div>
+        <div class=" col-md-12 col-lg-12 "
+            style="padding:0;height: 52px;">
+            <!-- 此处可以调整导航栏下间距 -->
+            <nav class="navbar navbar-info">
+                <div class="container-fluid">
+                    <div class="collapse navbar-collapse"
+                        id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav"
+                            id='MEC-navbar-syh'>
+                            <li class="active"><a
+                                    href="#">首页
+                                    <span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="active"><a
+                                    href="#">体检套餐</a>
+                            </li>
+                            <li class="active"><a
+                                    href="#">CT检查</a>
+                            </li>
+                            <li class="active"><a
+                                    href="#">企业团检</a>
+                            </li>
+                            <li class="active"><a
+                                    href="#">报告读取</a>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#"
+                                    class="dropdown-toggle"
+                                    data-toggle="dropdown"
+                                    role="button"
+                                    aria-haspopup="true"
+                                    aria-expanded="false">体检百科<span
+                                        class="caret"></span></a>
+                                <ul class="dropdown-menu"
+                                    id="MEC-dropdown-menu-syh">
+                                    <li><a
+                                            href="#">体检指南</a>
+                                    </li>
+                                    <li><a
+                                            href="#">体检问答</a>
+                                    </li>
+                                    <li><a
+                                            href="#">体检项目</a>
+                                    </li>
+                                    <li><a
+                                            href="#">体检咨询</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul
+                            class="nav navbar-nav navbar-right">
+                            <li class="active">
+                                <a href="#">体检报告查询</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+    <main class="">
+        <div class="cont_top_01">
+            <img src="img/bgt-banner.jpg" alt="">
+            <a href="#"></a>
+        </div>
+        <div class="query_001">
+            <dl>
+                <dt class="dt1">体检报告查询</dt>
+                <div class="dt2">
+                    <dd class="font">医院所在地:</dd>
+                    <dd class="province">
+                        <select id="s_province" name="s_province">
+                            <!-- <option class="option1">请选择</option>
+                            <option class="option1" value="0">北京</option>
+                            <option class="option1" value="1">山西</option>
+                            <option class="option1" value="2">辽宁</option>
+                            <option class="option1" value="3">上海</option>
+                            <option class="option1" value="4">江苏</option>
+                            <option class="option1" value="5">浙江</option>
+                            <option class="option1" value="6">安徽</option>
+                            <option class="option1" value="7">福建</option>
+                            <option class="option1" value="8">河南</option>
+                            <option class="option1" value="9">湖南</option>
+                            <option class="option1" value="10">广东</option>
+                            <option class="option1" value="11">重庆</option>
+                            <option class="option1" value="12">四川</option>
+                            <option class="option1" value="13">陕西</option>
+                            <option class="option1" value="14">甘肃</option>
+                            <option class="option1" value="15">宁夏回族自治区</option> -->
+                        </select>
+                    </dd>
+                    <dd class="city">
+                        <select id="s_city" name="s_city"></select>
+                    </dd>
+                    <dd class="font">请选择机构:</dd>
+                
+                    <dd class="organization">
+                        <select id="s_county" name="s_county"></select>
+                    </dd>
+                </div>    
+            </dl>
+            <script src="js/area.js"></script>
+            <div class="button_inquire">
+                <a href="#">立即前往</a>
+            </div>
+        </div>
+        <div class="cont_top_03">
+            <div class="cont_top_03_left">
+                <div class="record">个人体检报告档案</div>
+                <p>您好，您还未登陆，检测不到您的体检报告</p>
+                <span>请登录</span>
+                <a href="#"><img src="img/Connect_logo_2.png" alt=""></a>
+                <div class="unscramble_box">
+                    <div class="unscramble">
+                        <a href="#">体检报告解读
+                            <span></span>
+                            <p>专家一对一解读</br>您的终身私人健康医生</p>
+                        </a>
+                    </div>
+                    <div class="unscramble uploading">
+                        <a href="#">体检报告上传
+                            <span></span>
+                            <p>体验报告云存储</br>给健康做个档案</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_top_03_right">
+                <div class="record">热门机构报告查询入口</div>
+                <div class="entrance">
+                    <div class="entrance_01">
+                        <a href="#">中国人民解放军总医院</a>
+                        <a href="#">慈铭体检中心</a>
+                        <a href="#">深圳市第五人民医院(罗</a>
+                    </div>
+                    <div class="entrance_01">
+                        <a href="#">美年大健康体检中心</a>
+                        <a href="#">慈铭体检中心</a>
+                        <a href="#">美年大健康体检中心</a>
+                    </div>
+                    <div class="entrance_01">
+                        <a href="#">中国人民解放军第302</a>
+                        <a href="#">九华健康体检中心</a>
+                        <a href="#">沈阳阳光体检中心</a>
+                    </div>
+                    <div class="entrance_01">
+                        <a href="#">爱康国宾体检中心</a>
+                        <a href="#">美兆体检中心</a>
+                        <a href="#">深圳第一健康体检中心</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont_top_04">
+            <div class="header_text_01">
+                <h5>按拼音首字母选择</h5>
+            </div>
+            <div class="alphabet_01">
+                <span>全部</span>
+                <div>
+                    <span>A</span>
+                    <span class="darkgray">B</span>
+                    <span class="darkgray">C</span>
+                    <span class="darkgray">D</span>
+                    <span>E</span>
+                    <span class="darkgray">F</span>
+                    <span class="darkgray">G</span>
+                    <span class="darkgray">H</span>
+                    <span>I</span>
+                    <span class="darkgray">J</span>
+                    <span>K</span>
+                    <span class="darkgray">L</span>
+                    <span>M</span>
+                    <span class="darkgray">N</span>
+                    <span>O</span>
+                    <span>P</span>
+                    <span class="darkgray">Q</span>
+                    <span>R</span>
+                    <span class="darkgray">S</span>
+                    <span class="darkgray">T</span>
+                    <span>U</span>
+                    <span>V</span>
+                    <span>W</span>
+                    <span class="darkgray">X</span>
+                    <span class="darkgray">Y</span>
+                    <span class="darkgray">Z</span>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>B</span>
+                    <a href="#" class="town_city">北京</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02">
+                        <div class="entrance_02_01">
+                            <a href="#">中国航天中心医院体检中心</a>
+                            <a href="#">首都医科大学附属宣武医院</a>
+                            <a href="#">慈铭体检中心</a>
+                            <a href="#">北京松乔健康体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">中国人民解放军总医院301</a>
+                            <a href="#">首都医科大学附属北京安贞</a>
+                            <a href="#">慈铭体检中心</a>
+                            <a class="conceal">aa</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">慈铭体检中心</a>
+                            <a href="#">中国人民解放军第302医院</a>
+                            <a href="#">九华健康体检中心</a>
+                            <a class="conceal">aa</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">美年大健康体检中心</a>
+                            <a href="#">北京协和医院中心(东</a>
+                            <a href="#">美兆体检中心</a>
+                            <a class="conceal">aa</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">首都医科大学附属北京儿童</a>
+                            <a href="#">爱康国宾体检中心</a>
+                            <a href="#">爱基因体检中心</a>
+                            <a class="conceal">aa</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01" id="M_father_01_cn">
+                <div class="brows_01" id="M_click_01_cn">
+                    <span>C</span>
+                    <a href="javascript:;" class="town_city">长沙</a>
+                    <a href="javascript:;" class="town_city town_city_02">重庆</a>
+                    <a href="javascript:;" class="town_city town_city_02">成都</a>
+                    <a href="javascript:;" class="town_city town_city_02">郴州</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">长沙市岳麓区人民医院体检</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">长沙市第三医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">长沙市第四医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">新华卓越(长沙)健康体检</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02">
+                        <div class="entrance_02_01">
+                            <a href="#">重庆第三人民医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">重庆佳音医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">重庆大坪医院体中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02">
+                        <div class="entrance_02_01">
+                            <a href="#">成都成飞医院体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02">
+                        <div class="entrance_02_01">
+                            <a href="#">郴州东华医院健康体检管理中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>D</span>
+                    <a href="javascript:;" class="town_city">东莞</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">东莞福华体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>F</span>
+                    <a href="javascript:;" class="town_city">福州</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">福建医科大学附属协和医院</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">福州市第一医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">福建大学附属第一医院</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">福州慈铭健康体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>G</span>
+                    <a href="javascript:;" class="town_city">广州</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">广东顺德中医药大学医院体</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">广州华侨医院（暨南大学附</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">南方医科大学中西医结合医</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">广州金域体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">广州中山大学附属第六医院</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01" id="M_father_02_cn">
+                <div class="brows_01" id="M_click_02_cn">
+                    <span>H</span>
+                    <a href="javascript:;" class="town_city">杭州</a>
+                    <a href="javascript:;" class="town_city town_city_02">合肥</a>
+                    <a href="javascript:;" class="town_city town_city_02">汉中</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">空军杭州疗养院体检中心</a>
+                            <a href="#">浙江省中医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">杭州艾博体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">浙江省绿城医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">浙江省立同德医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">绿城九溪玫瑰园体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">合肥名流体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">合肥105医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">安徽省第二人民医院（黄山路院区）体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">陕西汉中市美康体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>J</span>
+                    <a href="javascript:;" class="town_city">嘉兴</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">武警浙江总队医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">嘉兴康石体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>L</span>
+                    <a href="#" class="town_city">兰州</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">武威市体检报告中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01" id="M_father_03_cn">
+                <div class="brows_01" id="M_click_03_cn">
+                    <span>N</span>
+                    <a href="javascript:;" class="town_city">宁波</a>
+                    <a href="javascript:;" class="town_city town_city_02">南京</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">宁波大学附属医院体检中心</a>
+                            <a href="#">浙江大学明州医院国际保健中心PET-CT</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">宁波解放军第113医院体检</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">宁波第一医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">鄞州人民医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">宁波海曙天一健康体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">江苏省省级机关医院体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>Q</span>
+                    <a href="javascript:;" class="town_city">泉州</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">泉州180医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">福建省泉州海体健康体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">泉州延年健康管理中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01" id="M_father_04_cn">
+                <div class="brows_01" id="M_click_04_cn">
+                    <span>S</span>
+                    <a href="javascript:;" class="town_city">绍兴</a>
+                    <a href="javascript:;" class="town_city town_city_02">上海</a>
+                    <a href="javascript:;" class="town_city town_city_02">深圳</a>
+                    <a href="javascript:;" class="town_city town_city_02">沈阳</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">绍兴市中医院体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">上海市第六人民医院体检中心</a>
+                            <a href="#">上海交通大学华检体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">上海童康体检中心</a>
+                            <a href="#">上海455医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">上海长征医院体检中心</a>
+                            <a href="#">上海东方医院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">上海仁爱医院体检中心</a>
+                            <a href="#">上海交通大学附属仁济医院南院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">上海岳阳医院体检中心</a>
+                            <a href="#">美年大健康体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">深圳第一健康体检中心</a>
+                            <a href="#">深圳市人民医院体检中心(一门诊分部)</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">深圳博爱医院体检中心</a>
+                            <a href="#">深圳市第五人民医院(罗湖医院)体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">深圳第六人民医院（南山医院）体检中心</a>
+                            <a href="#">深圳第一健康体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">深圳市中医院体检中心</a>
+                            <a href="#">中信健康体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">深圳市人民医院体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">沈阳阳光体检中心铁西分院</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">沈阳阳光体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>T</span>
+                    <a href="javascript:;" class="town_city">太原</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">山西尚宁健康体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">和谐健康体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01" id="M_father_05_cn">
+                <div class="brows_01" id="M_click_05_cn">
+                    <span>X</span>
+                    <a href="javascript:;" class="town_city">西安</a>
+                    <a href="javascript:;" class="town_city town_city_02">厦门</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">智行深度（精密）体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">新华健康体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">普惠体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">中信健康管理厦门体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01">
+                <div class="brows_01">
+                    <span>Y</span>
+                    <a href="javascript:;" class="town_city">银川</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">宁夏银川博尚体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="select_01" id="M_father_06_cn">
+                <div class="brows_01" id="M_click_06_cn">
+                    <span>Z</span>
+                    <a href="javascript:;" class="town_city">中山</a>
+                    <a href="javascript:;" class="town_city town_city_02">郑州</a>
+                    <div class="underline_011"></div>
+                </div>
+                <div class="town_city_box">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">广东省中山市人民医院体检中心</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="town_city_box town_city_box2">
+                    <div class="entrance_02 ">
+                        <div class="entrance_02_01">
+                            <a href="#">郑州仁人健康体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">郑煤仁记体检院体检中心</a>
+                        </div>
+                        <div class="entrance_02_01">
+                            <a href="#">郑州豫慈体检中心</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont_top_05">
+            <a href="">
+                <img src="img/bgt-banner2.jpg" alt="">
+            </a>
+        </div>
+    </main>
+    <footer class="container">
+
+        <div
+            class="MEC-weibu hidden-xs hidden-sm">
+            <div class="MEC-weibu-buju-left">
+                <div class="MEC-weibu-buju-top">
+                    <p>
+                        Copyright 2012-2019
+                        viptijian.com
+                        版权所有：中康体检网(福州中康信息科技有限公司)
+                        ICP证：闽ICP备10017105号
+
+                        <br>
+
+                        声明:本站部分信息图片来源于互联网,如果侵犯了您的权益敬请告知.
+
+                        <a href=""
+                            style="color: grey;">sitemap</a>
+
+                        法律顾问：福建雅厚律师事务所
+
+                        <br>
+
+                        <a href=""
+                            style="color: #FFFFFF;">增值业务经营许可证：粤B2-15138</a>
+                    </p>
+                </div>
+                <div class="MEC-weibu-buju-bot">
+                    <div class="logo-top">
+                        <img src="img/logo-top-1.png"
+                            style="width: 80px;">
+                        <img src="img/logo-top-2.png"
+                            style="width: 80px;">
+                        <img src="img/logo-top-3.png"
+                            style="width: 80px;">
+                        <img src="img/logo-top-4.png"
+                            style="width: 80px;">
+                    </div>
+                    <div class="logo-bot">
+                        <img src="img/logo-bot-1.png"
+                            style="width: 80px;">
+                        <img src="img/logo-bot-2.png"
+                            style="width: 80px;">
+                        <img src="img/logo-bot-3.png"
+                            style="width: 80px;">
+                        <img src="img/logo-bot-4.png"
+                            style="width: 80px;">
+                        <img src="img/logo-bot-5.png"
+                            style="width: 80px;">
+                    </div>
+                </div>
+            </div>
+            <div class="MEC-weibu-buju-left">
+                <img src="img/ne_ewm.png">
+            </div>
+        </div>
+
+    </footer>
+    <!-- 登录窗口 -->
+    <div id="MEC-login-syh" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button class="close"
+                        data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                </div>
+
+                <div>
+                    <div class="modal-title">
+                        <h1 class="text-center">登录
+                        </h1>
+                    </div>
+                    <div class="modal-body">
+                        <div
+                            id="MEC-denglu-left-syh">
+                            <img src="./img/登录图.jpg"
+                                alt="" />
+                            <form
+                                class="form-group"
+                                action=""
+                                id="MEC-denglu-right-syh">
+                                <div
+                                    class="form-group">
+                                    <label
+                                        for="">用户名</label>
+                                    <input
+                                        class="form-control"
+                                        type="text"
+                                        placeholder="">
+                                </div>
+                                <div
+                                    class="form-group">
+                                    <label
+                                        for="">密码</label>
+                                    <input
+                                        class="form-control"
+                                        type="password"
+                                        placeholder="">
+                                </div>
+                                <div
+                                    class="text-right">
+                                    <button
+                                        class="btn btn-primary"
+                                        type="submit">登录</button>
+                                    <button
+                                        class="btn btn-danger"
+                                        data-dismiss="modal">取消</button>
+                                </div>
+                                <a href=""
+                                    data-toggle="modal"
+                                    data-dismiss="modal"
+                                    data-target="#register">还没有账号？点我注册</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="js/down_cn.js"></script>
+
+</body>
+<script>
+    // 手风琴特效
+    $(document).ready(function () {
+        $('.MEC-content-ul-syh').children(
+            'li').fadeTo(0, 0.5)
+        $('.MEC-content-syh li')
+            .mouseenter(function () {
+                $(this).stop()
+                    .animate({
+                        width: 400
+                    }, 100).siblings(
+                        'li').stop()
+                    .animate({
+                        width: 150
+                    }, 100)
+                $(this).siblings('li')
+                    .fadeTo(0, 0.5)
+                $(this).fadeTo(0, 1)
+            }).mouseleave(function () {
+                $('.MEC-content-syh li')
+                    .stop().animate({
+                        width: 200
+                    }, 100);
+                //  $(this).children("li").fadeTo(0,0.5)
+                $('.MEC-content-ul-syh')
+                    .children('li')
+                    .fadeTo(0, 0.5)
+            })
+    });
+</script>
+
+</html>
